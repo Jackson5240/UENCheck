@@ -11,9 +11,9 @@ git push -u origin main<br>
 Installed .NET 5.0.408
 
 ## To run app
-cd <project workspace>
-dotend build
-dotend run
+cd <project workspace><br>
+dotend build<br>
+dotend run<br>
 
 ## Access the app
 Open the browser, access "https://localhost:5001"
