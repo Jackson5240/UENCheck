@@ -1,0 +1,45 @@
+@model UENCheckApp.Models.UENInput
+
+<h2>UEN Check Space</h2>
+
+<!-- Debug block: show all validation errors -->
+@if (!ViewData.ModelState.IsValid)
+{
+    <div style="background:#ffeeee; color:red; padding:10px; margin-bottom:10px;">
+        <strong>Debug - Validation Errors:</strong><br />
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <div>@error.ErrorMessage</div>
+        }
+    </div>
+}
+
+<!-- <form asp-action="Index" method="post"> -->
+<form asp-action="Index" asp-controller="UENInput" method="post">
+
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div style="margin-bottom: 20px;">
+        <label>Business registered with ACRA test</label>
+        <input asp-for="BusinessReg" />
+        <!--<span asp-validation-for="BusinessReg" class="text-danger"></span>-->
+    </div>
+    <div style="margin-bottom: 20px;">
+        <label>Local Companies registered with ACRA</label>
+        <input asp-for="LocalCompany" />
+        <!--<span asp-validation-for="LocalCompany" class="text-danger"></span>-->
+    </div>
+<div> </div>
+    <div style="margin-bottom: 20px;">
+        <label>All Other Entities</label>
+        <input asp-for="OtherEntity" />
+        <!--<span asp-validation-for="OtherEntity" class="text-danger"></span>-->
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p style="color:green">@ViewBag.Message</p>
+}
