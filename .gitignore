@@ -484,5 +484,5 @@ $RECYCLE.BIN/
 *.swp
 
 # Build folders
-bin/
-obj/
+UENValidateProj/bin/
+UENValidateProj.Tests/obj/

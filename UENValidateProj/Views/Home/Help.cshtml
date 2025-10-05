@@ -1,0 +1,90 @@
+@{
+    ViewData["Title"] = "Help - UEN Examples";
+}
+
+<h2 class="mb-4">Help: Understanding UEN Formats</h2>
+<p>
+    A <strong>Unique Entity Number (UEN)</strong> identifies businesses and entities registered in Singapore.
+    Below are examples of valid and invalid formats.
+</p>
+
+<div class="row">
+    <!-- Business Registrations -->
+    <div class="col-md-4 mb-3">
+        <div class="card border-success h-100">
+            <div class="card-header bg-success text-white">
+                Business Registrations (ACRA)
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Format</h5>
+                <p>8 digits + 1 letter</p>
+                <h6>✅ Valid Examples:</h6>
+                <ul>
+                    <li><code>12345678A</code></li>
+                    <li><code>87654321Z</code></li>
+                </ul>
+                <h6>❌ Invalid Examples:</h6>
+                <ul>
+                    <li><code>ABCDEFGHA</code> (must be digits)</li>
+                    <li><code>123456789</code> (too long)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Local Companies -->
+    <div class="col-md-4 mb-3">
+        <div class="card border-primary h-100">
+            <div class="card-header bg-primary text-white">
+                Local Companies (ACRA)
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Format</h5>
+                <p>YYYY + 5 digits + 1 letter<br/>(year between 1800–2028)</p>
+                <h6>✅ Valid Examples:</h6>
+                <ul>
+                    <li><code>200312345A</code></li>
+                    <li><code>189912345B</code></li>
+                    <li><code>202812345C</code></li>
+                </ul>
+                <h6>❌ Invalid Examples:</h6>
+                <ul>
+                    <li><code>179912345D</code> (year < 1800)</li>
+                    <li><code>202912345E</code> (year > 2028)</li>
+                    <li><code>18991234A</code> (only 4 digits)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Other Entities -->
+    <div class="col-md-4 mb-3">
+        <div class="card border-warning h-100">
+            <div class="card-header bg-warning text-dark">
+                Other Entities (Societies, LLP, etc.)
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Format</h5>
+                <p>
+                    Tyy / Syy / Ryy + Entity Code + 4 digits + Letter
+                </p>
+                <h6>✅ Valid Examples:</h6>
+                <ul>
+                    <li><code>T19LL0001K</code></li>
+                    <li><code>S85FC1234L</code></li>
+                    <li><code>R01LP9999Z</code></li>
+                </ul>
+                <h6>❌ Invalid Examples:</h6>
+                <ul>
+                    <li><code>T29ZZ9999Z</code> (wrong entity code)</li>
+                    <li><code>X19LL0001K</code> (wrong prefix)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p class="mt-4">
+    👉 Try entering a UEN on the 
+    <a asp-controller="UENInput" asp-action="Index" class="btn btn-sm btn-outline-primary">Validation Page</a>.
+</p>

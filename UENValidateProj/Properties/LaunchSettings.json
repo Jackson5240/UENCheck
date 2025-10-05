@@ -1,0 +1,37 @@
+{
+  // ------------------------------------------------------------
+  // launchSettings.json
+  // ------------------------------------------------------------
+  // Purpose:
+  // Defines how your ASP.NET Core project runs locally
+  // (in Visual Studio, VS Code, or via `dotnet run`).
+  // It controls environment variables, URLs, and whether
+  // the browser should auto-launch when you start debugging.
+  // ------------------------------------------------------------
+  // Each "profile" defines a way to launch the app.
+  // You can have multiple profiles for different environments.
+  "profiles": {
+    // The name of this profile (matches your project name).
+    // This will appear as a selectable option in Visual Studio’s "Run" dropdown.
+    "WeatherForecastProj": {
+      // Instructs .NET to run the current project (not IIS Express, Docker, etc.)
+      "commandName": "Project",
+      // When true, prints helpful runtime messages like:
+      // "Now listening on: http://localhost:5003"
+      "dotnetRunMessages": true,
+      // Automatically opens your default browser to the app’s URL
+      // when you start the project (useful during development).
+      "launchBrowser": true,
+      // The local address and port your web app listens on.
+      "applicationUrl": "http://localhost:5003",
+      "environmentVariables": {
+        // Sets the environment variable for this profile.
+        // Options:
+        //   - Development → detailed error pages, hot reload
+        //   - Staging → pre-production environment
+        //   - Production → optimized mode with generic error pages
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
