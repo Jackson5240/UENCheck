@@ -26,6 +26,8 @@ This README has a clickable **Table of Contents**, section headers.
 
 3) Recommeded to run in **Windows** Environment for this Project
 
+4) Chrome Browser is installed
+
 ## Download Project From Git Repo Link
 
 #### GitHub Repositiory (Option 1)
@@ -50,11 +52,11 @@ git clone https://github.com/Jackson5240/UENCheck.git
 
 #### Run "runapp.ps1" (Option 1)
 
-1) Open Powershell (Recommended to run as Administrator) and run the follwing command
+1) Open Powershell (Recommended to run as Administrator) and run the following command
 
 ```
-## Go to the root folder of the project
-cd UENCheck
+## Go to the root folder of the project ( UENCheck or UENCheck-main )
+cd <root folder>
 
 ## Run script
 .\runapp.ps1
