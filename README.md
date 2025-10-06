@@ -38,7 +38,7 @@ This README has a clickable **Table of Contents**, section headers.
 
 ![Alt text](images/github_pull_proj.png)
 
-3) Extract the zip file
+3) Extract the zip file (Note: For zip extraction, click on "Extract here" option)
 
 #### Git Clone from Repo (Option 2)
 
