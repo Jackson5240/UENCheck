@@ -44,8 +44,8 @@ namespace UENValidateProj
             else
             {
                 // For now, this is not handled
-                app.UseExceptionHandler("/Home/Error"); // Redirects to a custom error page.
-                app.UseHsts(); // Adds Strict-Transport-Security header to force HTTPS.
+                // app.UseExceptionHandler("/Home/Error"); // Redirects to a custom error page.
+                // app.UseHsts(); // Adds Strict-Transport-Security header to force HTTPS.
             }
 
             // Enable routing
