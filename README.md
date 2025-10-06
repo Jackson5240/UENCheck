@@ -122,7 +122,7 @@ Start-Process -FilePath "dotnet" -ArgumentList "run --project .\UENValidateProj\
 
 #### Additional Information for UEN Validator Page
 
-![Alt text](images/about_uen_validator.png)
+![Alt text](images/about_uen_validator_annotated.png)
 
 #### UEN format Validaty Example
 
