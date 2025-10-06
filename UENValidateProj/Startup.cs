@@ -36,7 +36,6 @@ namespace UENValidateProj
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            // 1️⃣ Development vs. Production error handling
             if (env.IsDevelopment())
             {
                 // Show detailed error pages for easier debugging during development.
@@ -44,21 +43,15 @@ namespace UENValidateProj
             }
             else
             {
-                // In production, use a generic error handler and enable HSTS.
+                // For now, this is not handled
                 app.UseExceptionHandler("/Home/Error"); // Redirects to a custom error page.
                 app.UseHsts(); // Adds Strict-Transport-Security header to force HTTPS.
             }
 
-            // 2️⃣ Enforce HTTPS and serve static files (like CSS, JS, images)
-            app.UseHttpsRedirection(); // Redirect all HTTP requests to HTTPS.
-            app.UseStaticFiles();       // Allow serving static files from wwwroot.
-            // 3️⃣ Enable routing
+            // Enable routing
             app.UseRouting();
-            // 4️⃣ (Optional) Authorization middleware
-            // Currently no authentication, but included for future expansion.
-            app.UseAuthorization();
 
-            // 5️⃣ Define endpoint routing for MVC controllers.
+            // Define endpoint routing for MVC controllers.
             app.UseEndpoints(endpoints =>
             {
                 // Default route:
