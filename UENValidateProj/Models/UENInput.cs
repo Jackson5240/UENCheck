@@ -39,7 +39,7 @@ namespace UENValidateProj.Models
         // - Followed by 5 digits and a letter
         // ------------------------------------------------------------
         [RegularExpression(@"^(18\d{2}|19\d{2}|20(0\d|1\d|2[0-8]))\d{5}[A-Za-z]$",
-            ErrorMessage = "LocalCompany must follow yyyyNNNNNX format (1800–2028).")]
+            ErrorMessage = "YYYY + 5 digits + 1 letter (year between 1800–2028)")]
         public string LocalCompany { get; set; } = "";
 
         // ------------------------------------------------------------
@@ -53,7 +53,7 @@ namespace UENValidateProj.Models
         // The (?i) prefix makes the pattern case-insensitive.
         // ------------------------------------------------------------
         [RegularExpression(@"(?i)^(T(0[0-9]|1[0-9]|2[0-8])|[SR]\d{2})(LP|LL|FC|PF|RF|MQ|MM|NB|CC|CS|MB|FM|GS|DP|CP|NR|CM|CD|MD|HS|VH|CH|MH|CL|XL|CX|HC|RPTU|TC|FB|FN|PA|PB|SS|MC|SM|GA|GB)\d{4}[A-Z]$",
-            ErrorMessage = "OtherEntity must follow T/S/RyyXXNNNNX format.")]
+            ErrorMessage = "Tyy / Syy / Ryy + Entity Code + 4 digits + Letter")]
         public string OtherEntity { get; set; } = "";
 
         // ------------------------------------------------------------
