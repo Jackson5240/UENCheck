@@ -61,16 +61,19 @@ cd <root folder>
 ## Run script
 .\runapp.ps1
 ```
-###### Script logic flows
+###### Script logic flows for runapp.ps1
  - Clears all NuGet caches
+   
  - Remove bin/obj folders if they exist
+   
  - Clean Solution
+   
  - Build Solution
- - Run unit tests
- - Start the main ASP.NET app
+   
+ - Run unit test
 
 ![Alt text](images/run_unit_test.png)
-
+ 
  - Run the application on the background
 
 ![Alt text](images/run_app_background.png)
@@ -84,8 +87,8 @@ cd <root folder>
 1) Open Powershell (Recommended to run as Administrator) and run the following command
 
 ```
-## Go to the root folder of the project
-cd UENCheck
+## Go to the root folder of the project ( UENCheck or UENCheck-main )
+cd <root folder>
 
 ## Clears all NuGet caches
 dotnet nuget locals all --clear
